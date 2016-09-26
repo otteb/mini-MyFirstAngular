@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html ng-app="friendsList">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,15 +8,23 @@
     <link rel="stylesheet" href="./stylesheet.css">
     <title>title here</title>
 </head>
-<body>
+<body ng-controller= "mainCtrl">
 
     <main>
+      <input type="text" name="friendName" value="" maxlength="100" ng-model="friend" />
+      <input type="submit" value="Submit" ng-click="addFriend(friend)" />
+      <div ng-repeat="friend in friends" class="example">
+        <h1>
+          {{friend}}
+        </h1>
+      </div>
 
     </main>
 
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js">
     </script>
+    <script src="app.js"></script>
+    <script src="controller.js"></script>
     <!-- Don't put anything after this... -->
 </body>
 </html>

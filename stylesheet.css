@@ -1,1 +1,9 @@
-
+h1 {
+  font-size: 5em;
+}
+body {
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+}
